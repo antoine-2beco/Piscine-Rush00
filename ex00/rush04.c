@@ -12,19 +12,18 @@
 
 void	ft_putchar(char c);
 
-void	line(int x, char g, char m, char d)
+void	line(int x, char l, char m, char r)
 {
 	if (x <= 0)
 		return ;
-	ft_putchar(g);
+	ft_putchar(l);
 	x--;
 	while (x > 1)
 	{
 		ft_putchar(m);
 		x--;
 	}
-	if (x > 0)
-		ft_putchar(d);
+	ft_putchar(r);
 	ft_putchar('\n');
 }
 
@@ -39,6 +38,5 @@ void	rush(int x, int y)
 		line (x, 'B', ' ', 'B');
 		y --;
 	}
-	if (y > 0)
-		line(x, 'C', 'B', 'A');
+	line(x, 'C', 'B', 'A');
 }
